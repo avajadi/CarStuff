@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CarStuff</string>
+    <string name="action_settings">Settings</string>
+    <string name="car_spinner_prompt">Bil</string>
+    <string name="send_label">Skicka</string>
+    <string name="litre">liter</string>
+    <string name="currency_abrev">kr</string>
+    <string name="kilometer_abrev">km</string>
+    <string name="saved">Sparat</string>
+
+</resources>

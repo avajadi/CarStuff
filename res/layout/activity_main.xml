@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <Spinner
+        android:id="@+id/carSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:prompt="@string/car_spinner_prompt" />
+
+     <EditText
+         android:id="@+id/litres"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/carSpinner"
+         android:layout_below="@+id/carSpinner"
+         android:ems="10"
+         android:inputType="numberDecimal"
+         android:text="" />
+    
+    <EditText
+        android:id="@+id/sek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/carSpinner"
+        android:layout_below="@+id/litres"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/kilometers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/carSpinner"
+        android:layout_below="@+id/sek"
+        android:ems="10"
+        android:inputType="number"
+        android:text="" />
+
+    <Button
+        android:id="@+id/report_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/kilometers"
+        android:layout_below="@+id/kilometers"
+        android:text="@string/send_label" 
+        android:onClick="report"/>
+
+    <TextView
+        android:id="@+id/litres_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/litres"
+        android:layout_alignBottom="@+id/litres"
+        android:layout_toRightOf="@+id/litres"
+        android:layout_marginLeft="8dp"
+        android:text="@string/litre"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/sek"
+        android:layout_alignBottom="@+id/sek"
+        android:layout_alignLeft="@+id/litres_label"
+        android:layout_alignParentRight="true"
+        android:text="@string/currency_abrev"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/kilometers"
+        android:layout_alignBottom="@+id/kilometers"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignRight="@+id/textView1"
+        android:text="@string/kilometer_abrev"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/kilometers"
+        android:layout_below="@+id/kilometers"
+        android:visibility="invisible" />
+
+</RelativeLayout>
